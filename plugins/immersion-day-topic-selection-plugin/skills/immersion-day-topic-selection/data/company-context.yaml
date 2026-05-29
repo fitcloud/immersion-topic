@@ -1,0 +1,133 @@
+회사_맥락:
+  회사명: "FitCloud / Saltware"
+
+  참고_URL:
+    - "https://www.fitcloud.co.kr/"
+    - "https://www.fitcloud.co.kr/support_sla"
+    - "https://workshop.fitcloud.co.kr/immersion-day"
+
+  주요_고객:
+    - "AWS를 사용하는 국내 기업 고객"
+    - "스타트업과 SMB 중심 고객"
+    - "금융/핀테크, 교육, 커머스, 플랫폼, Consumer/Retail, B2C 서비스 고객"
+    - "AWS 운영, 비용, 보안, 마이그레이션, DevOps, AI/ML 실습이 필요한 고객"
+    - "한국어 기술 지원과 워크숍 기반 enablement가 필요한 고객"
+
+  회사_포지셔닝:
+    - "AWS Partner"
+    - "AWS Immersion Day를 정기적으로 기획하고 운영하는 고객 교육/enablement 조직"
+    - "월 단위 또는 정기 cadence로 AWS/AI 워크숍 주제를 발굴하고 고객 반응을 확인하는 조직"
+
+  이머전데이_운영_맥락:
+    진행_주기: "매월 또는 정기적으로 진행"
+    기획_목표: "반복 가능한 주제 풀을 만들고, 고객 관심도와 서비스 오퍼링 가능성을 함께 검증한다."
+    기존_주제_확인_정책:
+      기본_확인_범위: "올해 진행한 FitCloud Immersion Day"
+      올해_주제_우선_확인: true
+      확인_필수: true
+      작년_이전_주제_정책: "작년 이전 주제는 기본 제외 대상으로 보지 않는다. AWS 서비스 변화, 고객 문제, 실습 시나리오, 오퍼링 경로가 달라졌다면 재해석 후보가 될 수 있다."
+      사용자_지정_제외: "사용자가 특정 과거 주제를 제외하라고 하면 연도와 관계없이 제외 또는 감점한다."
+      대체_확인_범위: "올해 목록 확인이 어렵다면 최근 6개월 또는 최근 3-5개 Immersion Day를 우선 확인한다."
+
+  고객_구성:
+    스타트업_비율: "60%"
+    엔터프라이즈_비율: "5%"
+    공공_비율: "10%"
+    SMB_비율: "25%"
+    메모: "스타트업과 SMB 고객 비중이 높으며, 일부 공공 및 엔터프라이즈 고객을 포함한다."
+    주제_선정_시사점:
+      - "엔터프라이즈 전용 governance, 대규모 데이터 플랫폼, 복잡한 보안 조직을 전제로 하는 주제는 기본 우선순위를 낮춘다."
+      - "스타트업/SMB 고객도 PoC, 팀 단위 도입, 비용/운영/보안 개선으로 적용할 수 있는 주제를 우선한다."
+      - "엔터프라이즈 성격의 주제라도 lightweight guardrails, PoC-scale data workflow, lean operations, MSP scenario로 재구성할 수 있으면 평가 대상에 포함한다."
+      - "public sector 또는 regulated customer에만 맞는 주제는 보안/거버넌스 오퍼링 가능성이 명확할 때만 높은 점수를 준다."
+
+  대상_산업군:
+    - "금융/핀테크"
+    - "교육"
+    - "커머스"
+    - "플랫폼 서비스"
+    - "Consumer / Retail"
+    - "B2C 서비스"
+    - "AWS governance가 중요한 공공 또는 규제 산업"
+
+  주요_고객_페르소나:
+    - 역할: "CTO / 기술 임원"
+      조직: "기술 조직"
+      주요_고민:
+        - "우리 회사에 AI를 어떻게 적용할 수 있는지"
+        - "PoC 이후 실제 운영까지 가능한지"
+      의사결정권: "높음"
+      선호_워크숍_형태: "briefing + demo"
+
+    - 역할: "클라우드/인프라 팀장"
+      조직: "인프라 / 플랫폼 / 운영"
+      주요_고민:
+        - "AWS 비용과 운영 효율"
+        - "장애 대응, 보안, 계정 관리"
+      의사결정권: "중간"
+      선호_워크숍_형태: "architecture + hands-on"
+
+    - 역할: "개발자 / 데이터 / AI 엔지니어"
+      조직: "개발 / 데이터 / AI"
+      주요_고민:
+        - "Bedrock, RAG, Agent를 실제로 어떻게 구현하는지"
+        - "실습 코드와 운영 패턴"
+      의사결정권: "낮음"
+      선호_워크숍_형태: "hands-on"
+
+  전략_관심_영역:
+    - "AWS 기반 generative AI 및 AI/ML 현대화"
+    - "AWS migration and modernization"
+    - "AWS 기반 DevOps와 CI/CD"
+    - "MSP와 클라우드 운영"
+    - "비용 가시화와 최적화"
+    - "보안, 거버넌스, 규제 워크로드 아키텍처"
+    - "Immersion Day와 hands-on workshop을 통한 고객 enablement"
+
+  현재_서비스_오퍼링:
+    - "FitCloud Cloud Center: multi-account, multi-region 사용량, 리소스, 비용, RI/Savings Plans, 비용 알림 가시화"
+    - "Support Desk: AWS 기술 지원 요청 추적과 한국어 지원"
+    - "금융 클라우드 컨설팅: 안전한 AWS 아키텍처와 비용/프로세스 최적화"
+    - "DevOps 컨설팅: CI/CD 자동화와 운영 협업"
+    - "Migration 컨설팅: assessment와 아키텍처 설계"
+    - "MSP 지원: 비용, 성능, 보안, 모니터링 운영"
+    - "AWS Immersion Day 및 workshop 프로그램"
+
+  재사용_가능_자산:
+    데모:
+      - "FitCloud Workshop 사이트와 과거 Immersion Day 자료"
+      - "Cloud Center / Support Desk 제품 맥락"
+    PoC_코드: []
+    참조_아키텍처:
+      - "AWS migration architecture"
+      - "AWS 기반 DevOps CI/CD"
+      - "클라우드 운영과 비용 최적화 아키텍처"
+      - "준비된 경우 generative AI / Bedrock workshop architecture"
+    영업_자료:
+      - "FitCloud 웹사이트"
+      - "Immersion Day workshop 페이지"
+      - "AWS support SLA"
+
+  AWS_파트너_강점:
+    - "AWS support와 managed service 운영"
+    - "비용 최적화와 사용량 가시화"
+    - "migration and modernization"
+    - "DevOps enablement"
+    - "한국어 고객 지원"
+    - "hands-on AWS 교육과 Immersion Day 운영"
+
+  공통_고객_pain_point:
+    - "여러 account와 region에 걸친 AWS 비용 가시화와 최적화"
+    - "기술 지원 요청 추적과 운영 대응"
+    - "기존 인프라에서 AWS로 안전하게 migration"
+    - "CI/CD와 DevOps 자동화"
+    - "금융 또는 규제 워크로드를 위한 안전한 아키텍처"
+    - "생성형 AI 관심을 hands-on AWS PoC와 반복 가능한 delivery로 연결"
+    - "클라우드 운영, 모니터링, 장애 대응"
+
+  제약_또는_피해야_할_방향:
+    - "FitCloud 오퍼링 또는 AWS hands-on delivery와 연결되지 않는 일반 트렌드 브리핑은 피한다."
+    - "최근 FitCloud Immersion Day와 중복되는 주제는 시나리오가 명확히 차별화되지 않으면 피한다."
+    - "재사용 가능한 demo 경로 없이 긴 고객 데이터 준비가 필요한 주제는 피한다."
+
+  메모: "회사 내용은 공개된 FitCloud/Saltware 서비스 페이지와 workshop 페이지를 기반으로 작성했다. 내부 전략, 준비된 demo, target account, 현재 영업 우선순위가 있으면 업데이트한다."

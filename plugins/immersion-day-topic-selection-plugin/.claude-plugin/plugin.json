@@ -1,0 +1,11 @@
+{
+  "name": "immersion-day-topic-selection-plugin",
+  "description": "AWS Immersion Day 주제를 객관 기준과 산정 근거, 회사 맥락, AWS Knowledge MCP 조사 신호를 반영해 선정하고 HTML로 정리하는 Skill을 추가합니다.",
+  "version": "1.0.0",
+  "author": {
+    "name": "FitCloud"
+  },
+  "homepage": "https://github.com/fitcloud/immersion-topic",
+  "repository": "https://github.com/fitcloud/immersion-topic",
+  "license": "Proprietary"
+}

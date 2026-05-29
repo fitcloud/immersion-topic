@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Immersion Day 주제 선정 결과</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #667085;
+      --line: #d7dce5;
+      --paper: #ffffff;
+      --wash: #f4f6f8;
+      --navy: #111827;
+      --blue: #175cd3;
+      --green: #15803d;
+      --amber: #a16207;
+      --red: #b42318;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--wash);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 42px;
+    }
+
+    header,
+    section {
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 30px;
+    }
+
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 22px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+
+    h1 { font-size: clamp(28px, 4vw, 42px); }
+    h2 { font-size: 21px; margin-bottom: 13px; }
+    h3 { font-size: 17px; margin-bottom: 9px; }
+    p { margin: 8px 0 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 14px;
+      min-height: 100%;
+      border-top: 5px solid #0f766e;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0 6px 8px 0;
+      background: #e0f2fe;
+      color: #075985;
+    }
+
+    .badge.high { background: #dcfce7; color: var(--green); }
+    .badge.medium { background: #fef9c3; color: var(--amber); }
+    .badge.low { background: #fee2e2; color: var(--red); }
+    .badge.rank { background: #dbeafe; color: #1d4ed8; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th { background: #eef2f7; font-weight: 700; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    ul { margin: 9px 0 0; padding-left: 19px; }
+    li { margin: 5px 0; }
+
+    .vote-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: #fbfcfe;
+      margin-top: 8px;
+    }
+
+    input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      accent-color: #0f766e;
+      flex: 0 0 auto;
+    }
+
+    .vote-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    button {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font: inherit;
+      font-weight: 700;
+      background: #fff;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    button.primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .vote-status {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #eef2ff;
+      color: #1e3a8a;
+      font-size: 13px;
+    }
+
+    .vote-status.empty {
+      background: #f3f4f6;
+      color: #4b5563;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 920px) {
+      main { width: min(100% - 20px, 760px); padding-top: 12px; }
+      header,
+      section { padding: 18px; }
+      .grid,
+      .grid.two { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Immersion Day 주제 선정 결과</h1>
+      <p>회사 맥락, 기존 FitCloud 교육 이력, AWS 공식 근거, AI Engineering 트렌드, 객관 평가 기준으로 선정한 최종 후보입니다.</p>
+    </header>
+
+    <section>
+      <h2>최종 추천 주제</h2>
+      <div class="grid">
+        <!-- Replace with final 3 candidate cards.
+        <article class="card">
+          <span class="badge rank">추천 1순위</span>
+          <span class="badge high">오퍼링 High</span>
+          <h3>후보 주제명</h3>
+          <p><strong>핵심:</strong> 한 줄 설명</p>
+          <ul>
+            <li><strong>권장 대상:</strong></li>
+            <li><strong>권장 시간:</strong></li>
+            <li><strong>산정 이유:</strong></li>
+            <li><strong>회사 적합성:</strong></li>
+            <li><strong>주요 근거:</strong></li>
+            <li><strong>리스크:</strong></li>
+          </ul>
+        </article>
+        -->
+      </div>
+    </section>
+
+    <section>
+      <h2>평가표</h2>
+      <!-- Replace with score table. -->
+    </section>
+
+    <section>
+      <h2>산정 이유 요약</h2>
+      <!-- Replace with rationale table. -->
+    </section>
+
+    <section>
+      <h2>투표</h2>
+      <p>가장 적합한 후보를 선택하세요. 선택은 이 브라우저에만 저장됩니다.</p>
+      <label class="vote-line">
+        <input type="radio" name="vote" value="candidate-1" data-title="후보 1" />
+        <span><strong>1. 후보 1</strong><br />핵심 요약</span>
+      </label>
+      <label class="vote-line">
+        <input type="radio" name="vote" value="candidate-2" data-title="후보 2" />
+        <span><strong>2. 후보 2</strong><br />핵심 요약</span>
+      </label>
+      <label class="vote-line">
+        <input type="radio" name="vote" value="candidate-3" data-title="후보 3" />
+        <span><strong>3. 후보 3</strong><br />핵심 요약</span>
+      </label>
+      <div id="vote-status" class="vote-status empty">아직 투표하지 않았습니다.</div>
+      <div class="vote-actions">
+        <button type="button" class="primary" onclick="exportVote()">투표 결과 복사</button>
+        <button type="button" onclick="clearVote()">투표 초기화</button>
+      </div>
+      <p class="note">이 HTML은 정적 파일입니다. 투표는 현재 브라우저의 localStorage에만 저장되며 팀 단위 집계는 별도 설문/시트/서버가 필요합니다.</p>
+    </section>
+  </main>
+
+  <script>
+    const VOTE_KEY = "immersion-day-vote-v1";
+
+    function loadVote() {
+      try {
+        const raw = localStorage.getItem(VOTE_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function saveVote(input) {
+      const data = {
+        candidate: input.value,
+        title: input.dataset.title || input.value,
+        timestamp: new Date().toISOString()
+      };
+      localStorage.setItem(VOTE_KEY, JSON.stringify(data));
+      renderVoteStatus();
+    }
+
+    function clearVote() {
+      localStorage.removeItem(VOTE_KEY);
+      document.querySelectorAll('input[name="vote"]').forEach((radio) => {
+        radio.checked = false;
+      });
+      renderVoteStatus();
+    }
+
+    function exportVote() {
+      const vote = loadVote();
+      if (!vote) {
+        alert("저장된 투표가 없습니다.");
+        return;
+      }
+      const text = [
+        "Immersion Day 투표 결과",
+        "후보 ID: " + vote.candidate,
+        "후보 제목: " + vote.title,
+        "저장 시각: " + vote.timestamp
+      ].join("\n");
+      copyToClipboard(text);
+    }
+
+    function copyToClipboard(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => alert("투표 결과를 클립보드에 복사했습니다."))
+          .catch(() => fallbackCopy(text));
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.top = "0";
+      textarea.style.left = "0";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        alert("투표 결과를 클립보드에 복사했습니다.");
+      } catch (error) {
+        prompt("아래 내용을 직접 복사하세요.", text);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    function renderVoteStatus() {
+      const vote = loadVote();
+      const status = document.getElementById("vote-status");
+      if (!status) return;
+      if (!vote) {
+        status.classList.add("empty");
+        status.textContent = "아직 투표하지 않았습니다.";
+        return;
+      }
+      const savedAt = new Date(vote.timestamp).toLocaleString("ko-KR");
+      status.classList.remove("empty");
+      status.textContent = "현재 선택: " + vote.title + " (저장 시각 " + savedAt + ")";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const vote = loadVote();
+      if (vote) {
+        const radio = document.querySelector('input[name="vote"][value="' + vote.candidate + '"]');
+        if (radio) radio.checked = true;
+      }
+      document.querySelectorAll('input[name="vote"]').forEach((radio) => {
+        radio.addEventListener("change", () => saveVote(radio));
+      });
+      renderVoteStatus();
+    });
+  </script>
+</body>
+</html>

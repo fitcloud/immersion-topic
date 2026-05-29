@@ -1,0 +1,29 @@
+{
+  "name": "ai-workshop-tools",
+  "owner": {
+    "name": "FitCloud"
+  },
+  "metadata": {
+    "description": "AWS Immersion Day 및 AI 워크숍 기획을 위한 Claude Code 플러그인 마켓플레이스입니다.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "immersion-day-topic-selection-plugin",
+      "source": "./plugins/immersion-day-topic-selection-plugin",
+      "version": "1.0.0",
+      "description": "AWS Immersion Day 주제를 객관 기준과 산정 근거, 회사 맥락, AWS Knowledge MCP 조사 신호를 반영해 선정하고 HTML로 정리하는 Skill입니다.",
+      "author": {
+        "name": "FitCloud"
+      },
+      "category": "planning",
+      "tags": [
+        "aws",
+        "immersion-day",
+        "generative-ai",
+        "workshop",
+        "topic-selection"
+      ]
+    }
+  ]
+}
